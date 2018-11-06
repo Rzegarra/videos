@@ -15,7 +15,7 @@ class PersonasTableSeeder extends Seeder
             'nombre' => 'rafael',
             'tipo_documento' => 'DNI',
             'num_documento' => '45124548',
-            'direccion' => 'joder',
+            'direccion' => 'test',
             'email' => 'use@email.com'
 
         ]);
@@ -23,35 +23,35 @@ class PersonasTableSeeder extends Seeder
             'nombre' => 'daniela',
             'tipo_documento' => 'DNI',
             'num_documento' => '45124545',
-            'direccion' => 'joder',
+            'direccion' => 'test',
             'email' => 'user@email.com'
         ]);
         DB::table('personas')->insert([
             'nombre' => 'todos',
             'tipo_documento' => 'DNI',
             'num_documento' => '45114545',
-            'direccion' => 'joer',
+            'direccion' => 'test',
             'email' => 'use@email.com'
         ]);
         DB::table('personas')->insert([
             'nombre' => 'laboral',
             'tipo_documento' => 'DNI',
             'num_documento' => '456',
-            'direccion' => 'joer',
+            'direccion' => 'test',
             'email' => 'a@email.com'
         ]);
         DB::table('personas')->insert([
             'nombre' => 'abc',
             'tipo_documento' => 'DNI',
             'num_documento' => '123',
-            'direccion' => 'joer',
+            'direccion' => 'test',
             'email' => 'u@email.com'
         ]);
         DB::table('personas')->insert([
             'nombre' => 'ambiental',
             'tipo_documento' => 'DNI',
             'num_documento' => '789',
-            'direccion' => 'joer',
+            'direccion' => 'test',
             'email' => 'us@email.com'
         ]);
         
