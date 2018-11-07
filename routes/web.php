@@ -132,7 +132,15 @@ Route::group(['middleware'=>['auth']],function(){
         Route::put('/user/actualizar', 'UserController@update');
         Route::put('/user/desactivar', 'UserController@desactivar');
         Route::put('/user/activar', 'UserController@activar');
+        // Route::resource('user', 'UserController', ['except' => 'show', 'create', 'edit']);
         Route::delete('/user/delete', 'UserController@destroy');
+
+        Route::get('/users/{usuario}', 'UsersController@buscar');
+
+
+        Route::resource('users', 'UsersController', ['except' => 'show', 'create', 'edit']);
+        Route::resource('personas', 'PersonasController', ['except' => 'show', 'create', 'edit']);
+
     });
 
 });

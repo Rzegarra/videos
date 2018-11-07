@@ -34,10 +34,10 @@
                                     <th>Opciones</th>
                                     <th>Nombre</th>
                                     <th>Tipo Documento</th>
-                                    <th>Número</th>
+                                    <!-- <th>Número</th>
                                     <th>Dirección</th>
                                     <th>Teléfono</th>
-                                    <th>Email</th>
+                                    <th>Email</th> -->
                                     <th>Usuario</th>
                                     <th>Role</th>
                                 </tr>
@@ -48,25 +48,20 @@
                                         <button type="button" @click="abrirModal('persona','actualizar',persona)" class="btn btn-warning btn-sm">
                                           <i class="icon-pencil"></i>
                                         </button> &nbsp;
-                                        <template v-if="persona.condicion">
-                                            <button type="button" class="btn btn-danger btn-sm" @click="desactivarUsuario(persona.id)">
-                                                <i class="icon-trash"></i>
-                                            </button>
-                                        </template>
-                                        <template v-else>
-                                            <button type="button" class="btn btn-info btn-sm" @click="activarUsuario(persona.id)">
-                                                <i class="icon-check"></i>
-                                            </button>
-                                        </template>
+                                        <button type="button" @click="eliminarPersona(persona.id)" class="btn btn-danger btn-sm">
+                                          <i class="icon-trash"></i>
+                                        </button> &nbsp;
+
                                     </td>
                                     <td v-text="persona.nombre"></td>
                                     <td v-text="persona.tipo_documento"></td>
-                                    <td v-text="persona.num_documento"></td>
+                                    <!-- <td v-text="persona.num_documento"></td>
                                     <td v-text="persona.direccion"></td>
                                     <td v-text="persona.telefono"></td>
-                                    <td v-text="persona.email"></td>
+                                    <td v-text="persona.email"></td> -->
                                     <td v-text="persona.usuario"></td>
                                     <td v-text="persona.rol"></td>
+                                   
                                 </tr>                                
                             </tbody>
                         </table>
@@ -105,7 +100,7 @@
                                         <input type="text" v-model="nombre" class="form-control" placeholder="Nombre de la persona">                                        
                                     </div>
                                 </div>
-                                <div class="form-group row">
+                                <!-- <div class="form-group row">
                                     <label class="col-md-3 form-control-label" for="text-input">Tipo documento</label>
                                     <div class="col-md-9">
                                         <select v-model="tipo_documento" class="form-control">
@@ -139,7 +134,7 @@
                                     <div class="col-md-9">
                                         <input type="email" v-model="email" class="form-control" placeholder="Email">
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="form-group row">
                                     <label class="col-md-3 form-control-label" for="email-input">Role</label>
                                     <div class="col-md-9">
@@ -189,6 +184,7 @@
     export default {
         data (){
             return {
+                encontrado:0,
                 persona_id: 0,
                 nombre : '',
                 tipo_documento : '',
@@ -281,13 +277,44 @@
                 //Envia la petición para visualizar la data de esa página
                 me.listarPersona(page,buscar,criterio);
             },
+            eliminarPersona(id){
+                
+
+                swal({
+                title: 'Esta seguro de eliminar este usuario?',
+                type: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Aceptar!',
+                cancelButtonText: 'Cancelar',
+                confirmButtonClass: 'btn btn-success',
+                cancelButtonClass: 'btn btn-danger',
+                buttonsStyling: false,
+                reverseButtons: true
+                }).then((result) => {
+                if (result.value) {
+                    var url =  'users/' + id;
+                    axios.delete(url).then(response => {
+                        this.listarPersona(1,'','nombre');
+                    })
+                    
+                } else if (
+                    // Read more about handling dismissals
+                    result.dismiss === swal.DismissReason.cancel
+                ) {
+                    
+                }
+                }) 
+            },
             registrarPersona(){
+                console.log('registrando');
                 if (this.validarPersona()){
                     return;
                 }
                 
-                let me = this;
-
+                let me = this;  
+                console.log('ya casi registramos')
                 axios.post('/user/registrar',{
                     'nombre': this.nombre,
                     'tipo_documento': this.tipo_documento,
@@ -304,6 +331,7 @@
                     me.listarPersona(1,'','nombre');
                 }).catch(function (error) {
                     console.log(error);
+                    console.log('se jodio xD');
                 });
             },
             actualizarPersona(){
@@ -331,7 +359,27 @@
                     console.log(error);
                 }); 
             },
+            buscarPersona(usuario){
+                var url= '/users/' + usuario;
+                console.log(url);
+                axios.get(url).then(function (response) {
+
+                    console.log('esta el usuario ='+ response.data);
+                    if(response.data){
+                        this.encontrado = 1;
+                        console.log('si esta');
+                    }
+                    else{
+                        this.encontrado = 0;
+                        console.log('no esta');
+                    }
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+            },
             validarPersona(){
+                console.log('validando');
                 this.errorPersona=0;
                 this.errorMostrarMsjPersona =[];
 
@@ -339,6 +387,11 @@
                 if (!this.usuario) this.errorMostrarMsjPersona.push("El nombre de usuario no puede estar vacío.");
                 if (!this.password) this.errorMostrarMsjPersona.push("La password del usuario no puede estar vacía.");
                 if (this.idrol==0) this.errorMostrarMsjPersona.push("Seleccione una Role.");
+                // console.log('antesde encontrar');
+                // this.encontrado = this.buscarPersona(this.usuario);
+                // console.log(this.buscarPersona(this.usuario));
+                // if (this.encontrado) this.errorMostrarMsjPersona.push("El usuario ya existe21");
+                // console.log('despues de encontrar');
                 if (this.errorMostrarMsjPersona.length) this.errorPersona = 1;
 
                 return this.errorPersona;

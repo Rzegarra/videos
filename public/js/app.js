@@ -32956,15 +32956,19 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(57)
+}
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = null
+var __vue_script__ = __webpack_require__(59)
 /* template */
 var __vue_template__ = __webpack_require__(41)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
-var __vue_styles__ = null
+var __vue_styles__ = injectStyle
 /* scopeId */
 var __vue_scopeId__ = null
 /* moduleIdentifier (server only) */
@@ -33027,24 +33031,18 @@ var staticRenderFns = [
               _c("div", { staticClass: "card" }, [
                 _c(
                   "div",
-                  { staticClass: "embed-responsive embed-responsive-16by9" },
+                  {
+                    staticClass: "video-thumbnail",
+                    attrs: { "data-toggle": "modal", "data-target": "#eduardo" }
+                  },
                   [
-                    _c(
-                      "video",
-                      {
-                        staticClass: "embed-responsive-item",
-                        attrs: { controls: "" }
-                      },
-                      [
-                        _c("source", {
-                          attrs: {
-                            src:
-                              "https://koritos.sfo2.digitaloceanspaces.com/eduardoLanao.mp4?autoplay=0",
-                            type: "video/mp4"
-                          }
-                        })
-                      ]
-                    )
+                    _c("img", {
+                      staticClass: "card-img-top ",
+                      attrs: {
+                        src: "images/team/eduardo.png",
+                        alt: "Card image cap"
+                      }
+                    })
                   ]
                 ),
                 _vm._v(" "),
@@ -33061,27 +33059,75 @@ var staticRenderFns = [
                 ])
               ]),
               _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "modal fade cmd",
+                  attrs: {
+                    id: "eduardo",
+                    tabindex: "-1",
+                    role: "dialog",
+                    "aria-labelledby": "exampleModalLongTitle",
+                    "aria-hidden": "true"
+                  }
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "modal-dialog modal-lg",
+                      attrs: { role: "document" }
+                    },
+                    [
+                      _c("div", { staticClass: "modal-content" }, [
+                        _c("div", { staticClass: "modal-body" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "embed-responsive embed-responsive-16by9"
+                            },
+                            [
+                              _c(
+                                "video",
+                                {
+                                  staticClass: "embed-responsive-item vio",
+                                  attrs: { id: "videoEduardo", controls: "" }
+                                },
+                                [
+                                  _c("source", {
+                                    attrs: {
+                                      src:
+                                        "https://koritos.sfo2.digitaloceanspaces.com/eduardoLanao.mp4?autoplay=0",
+                                      type: "video/mp4"
+                                    }
+                                  })
+                                ]
+                              )
+                            ]
+                          )
+                        ])
+                      ])
+                    ]
+                  )
+                ]
+              ),
+              _vm._v(" "),
               _c("div", { staticClass: "card" }, [
                 _c(
                   "div",
-                  { staticClass: "embed-responsive embed-responsive-16by9" },
+                  {
+                    staticClass: "video-thumbnail",
+                    attrs: { "data-toggle": "modal", "data-target": "#guizado" }
+                  },
                   [
-                    _c(
-                      "video",
-                      {
-                        staticClass: "embed-responsive-item",
-                        attrs: { controls: "" }
-                      },
-                      [
-                        _c("source", {
-                          attrs: {
-                            src:
-                              "https://koritos.sfo2.digitaloceanspaces.com/AlbertoGuizado.mp4?autoplay=0",
-                            type: "video/mp4"
-                          }
-                        })
-                      ]
-                    )
+                    _c("img", {
+                      staticClass: "card-img-top ",
+                      attrs: {
+                        src: "images/team/Guizado.jpg",
+                        alt: "Card image cap"
+                      }
+                    })
                   ]
                 ),
                 _vm._v(" "),
@@ -33098,27 +33144,75 @@ var staticRenderFns = [
                 ])
               ]),
               _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "modal fade cmd",
+                  attrs: {
+                    id: "guizado",
+                    tabindex: "-1",
+                    role: "dialog",
+                    "aria-labelledby": "exampleModalLongTitle",
+                    "aria-hidden": "true"
+                  }
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "modal-dialog modal-lg",
+                      attrs: { role: "document" }
+                    },
+                    [
+                      _c("div", { staticClass: "modal-content" }, [
+                        _c("div", { staticClass: "modal-body" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "embed-responsive embed-responsive-16by9"
+                            },
+                            [
+                              _c(
+                                "video",
+                                {
+                                  staticClass: "embed-responsive-item vio",
+                                  attrs: { id: "videoGuizado", controls: "" }
+                                },
+                                [
+                                  _c("source", {
+                                    attrs: {
+                                      src:
+                                        "https://koritos.sfo2.digitaloceanspaces.com/AlbertoGuizado.mp4?autoplay=0",
+                                      type: "video/mp4"
+                                    }
+                                  })
+                                ]
+                              )
+                            ]
+                          )
+                        ])
+                      ])
+                    ]
+                  )
+                ]
+              ),
+              _vm._v(" "),
               _c("div", { staticClass: "card" }, [
                 _c(
                   "div",
-                  { staticClass: "embed-responsive embed-responsive-16by9" },
+                  {
+                    staticClass: "video-thumbnail",
+                    attrs: { "data-toggle": "modal", "data-target": "#jorge" }
+                  },
                   [
-                    _c(
-                      "video",
-                      {
-                        staticClass: "embed-responsive-item",
-                        attrs: { controls: "" }
-                      },
-                      [
-                        _c("source", {
-                          attrs: {
-                            src:
-                              "https://koritos.sfo2.digitaloceanspaces.com/jorgebarcena.mp4?autoplay=0",
-                            type: "video/mp4"
-                          }
-                        })
-                      ]
-                    )
+                    _c("img", {
+                      staticClass: "card-img-top ",
+                      attrs: {
+                        src: "images/team/barcenas.jpg",
+                        alt: "Card image cap"
+                      }
+                    })
                   ]
                 ),
                 _vm._v(" "),
@@ -33133,31 +33227,79 @@ var staticRenderFns = [
                     )
                   ])
                 ])
-              ])
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "modal fade cmd",
+                  attrs: {
+                    id: "jorge",
+                    tabindex: "-1",
+                    role: "dialog",
+                    "aria-labelledby": "exampleModalLongTitle",
+                    "aria-hidden": "true"
+                  }
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "modal-dialog modal-lg",
+                      attrs: { role: "document" }
+                    },
+                    [
+                      _c("div", { staticClass: "modal-content" }, [
+                        _c("div", { staticClass: "modal-body" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "embed-responsive embed-responsive-16by9"
+                            },
+                            [
+                              _c(
+                                "video",
+                                {
+                                  staticClass: "embed-responsive-item vio",
+                                  attrs: { id: "videojorge", controls: "" }
+                                },
+                                [
+                                  _c("source", {
+                                    attrs: {
+                                      src:
+                                        "https://koritos.sfo2.digitaloceanspaces.com/jorgebarcena.mp4?autoplay=0",
+                                      type: "video/mp4"
+                                    }
+                                  })
+                                ]
+                              )
+                            ]
+                          )
+                        ])
+                      ])
+                    ]
+                  )
+                ]
+              )
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "card-deck" }, [
               _c("div", { staticClass: "card" }, [
                 _c(
                   "div",
-                  { staticClass: "embed-responsive embed-responsive-16by9" },
+                  {
+                    staticClass: "video-thumbnail",
+                    attrs: { "data-toggle": "modal", "data-target": "#roncal" }
+                  },
                   [
-                    _c(
-                      "video",
-                      {
-                        staticClass: "embed-responsive-item",
-                        attrs: { controls: "" }
-                      },
-                      [
-                        _c("source", {
-                          attrs: {
-                            src:
-                              "https://koritos.sfo2.digitaloceanspaces.com/Christhian%20roncal.mp4?autoplay=0",
-                            type: "video/mp4"
-                          }
-                        })
-                      ]
-                    )
+                    _c("img", {
+                      staticClass: "card-img-top ",
+                      attrs: {
+                        src: "images/team/roncal.png",
+                        alt: "Card image cap"
+                      }
+                    })
                   ]
                 ),
                 _vm._v(" "),
@@ -33174,27 +33316,78 @@ var staticRenderFns = [
                 ])
               ]),
               _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "modal fade cmd",
+                  attrs: {
+                    id: "roncal",
+                    tabindex: "-1",
+                    role: "dialog",
+                    "aria-labelledby": "exampleModalLongTitle",
+                    "aria-hidden": "true"
+                  }
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "modal-dialog modal-lg",
+                      attrs: { role: "document" }
+                    },
+                    [
+                      _c("div", { staticClass: "modal-content" }, [
+                        _c("div", { staticClass: "modal-body" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "embed-responsive embed-responsive-16by9"
+                            },
+                            [
+                              _c(
+                                "video",
+                                {
+                                  staticClass: "embed-responsive-item vio",
+                                  attrs: { id: "videoroncal", controls: "" }
+                                },
+                                [
+                                  _c("source", {
+                                    attrs: {
+                                      src:
+                                        "https://koritos.sfo2.digitaloceanspaces.com/Christhian%20roncal.mp4?autoplay=0",
+                                      type: "video/mp4"
+                                    }
+                                  })
+                                ]
+                              )
+                            ]
+                          )
+                        ])
+                      ])
+                    ]
+                  )
+                ]
+              ),
+              _vm._v(" "),
               _c("div", { staticClass: "card" }, [
                 _c(
                   "div",
-                  { staticClass: "embed-responsive embed-responsive-16by9" },
+                  {
+                    staticClass: "video-thumbnail",
+                    attrs: {
+                      "data-toggle": "modal",
+                      "data-target": "#vladimir"
+                    }
+                  },
                   [
-                    _c(
-                      "video",
-                      {
-                        staticClass: "embed-responsive-item",
-                        attrs: { controls: "" }
-                      },
-                      [
-                        _c("source", {
-                          attrs: {
-                            src:
-                              "https://koritos.sfo2.digitaloceanspaces.com/VladimirBustinza_converted.mp4?autoplay=0",
-                            type: "video/mp4"
-                          }
-                        })
-                      ]
-                    )
+                    _c("img", {
+                      staticClass: "card-img-top ",
+                      attrs: {
+                        src: "images/team/vladimir.jpg",
+                        alt: "Card image cap"
+                      }
+                    })
                   ]
                 ),
                 _vm._v(" "),
@@ -33211,27 +33404,78 @@ var staticRenderFns = [
                 ])
               ]),
               _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "modal fade cmd",
+                  attrs: {
+                    id: "vladimir",
+                    tabindex: "-1",
+                    role: "dialog",
+                    "aria-labelledby": "exampleModalLongTitle",
+                    "aria-hidden": "true"
+                  }
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "modal-dialog modal-lg",
+                      attrs: { role: "document" }
+                    },
+                    [
+                      _c("div", { staticClass: "modal-content" }, [
+                        _c("div", { staticClass: "modal-body" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "embed-responsive embed-responsive-16by9"
+                            },
+                            [
+                              _c(
+                                "video",
+                                {
+                                  staticClass: "embed-responsive-item vio",
+                                  attrs: { id: "videovladimir", controls: "" }
+                                },
+                                [
+                                  _c("source", {
+                                    attrs: {
+                                      src:
+                                        "https://koritos.sfo2.digitaloceanspaces.com/VladimirBustinza_converted.mp4?autoplay=0",
+                                      type: "video/mp4"
+                                    }
+                                  })
+                                ]
+                              )
+                            ]
+                          )
+                        ])
+                      ])
+                    ]
+                  )
+                ]
+              ),
+              _vm._v(" "),
               _c("div", { staticClass: "card" }, [
                 _c(
                   "div",
-                  { staticClass: "embed-responsive embed-responsive-16by9" },
+                  {
+                    staticClass: "video-thumbnail",
+                    attrs: {
+                      "data-toggle": "modal",
+                      "data-target": "#guillermo"
+                    }
+                  },
                   [
-                    _c(
-                      "video",
-                      {
-                        staticClass: "embed-responsive-item",
-                        attrs: { controls: "" }
-                      },
-                      [
-                        _c("source", {
-                          attrs: {
-                            src:
-                              "https://koritos.sfo2.digitaloceanspaces.com/GuillermoBracamonte.mp4?autoplay=0",
-                            type: "video/mp4"
-                          }
-                        })
-                      ]
-                    )
+                    _c("img", {
+                      staticClass: "card-img-top ",
+                      attrs: {
+                        src: "images/team/guillermo.jpg",
+                        alt: "Card image cap"
+                      }
+                    })
                   ]
                 ),
                 _vm._v(" "),
@@ -33246,31 +33490,79 @@ var staticRenderFns = [
                     )
                   ])
                 ])
-              ])
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "modal fade cmd",
+                  attrs: {
+                    id: "guillermo",
+                    tabindex: "-1",
+                    role: "dialog",
+                    "aria-labelledby": "exampleModalLongTitle",
+                    "aria-hidden": "true"
+                  }
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "modal-dialog modal-lg",
+                      attrs: { role: "document" }
+                    },
+                    [
+                      _c("div", { staticClass: "modal-content" }, [
+                        _c("div", { staticClass: "modal-body" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "embed-responsive embed-responsive-16by9"
+                            },
+                            [
+                              _c(
+                                "video",
+                                {
+                                  staticClass: "embed-responsive-item vio",
+                                  attrs: { id: "videoguillermo", controls: "" }
+                                },
+                                [
+                                  _c("source", {
+                                    attrs: {
+                                      src:
+                                        "https://koritos.sfo2.digitaloceanspaces.com/GuillermoBracamonte.mp4?autoplay=0",
+                                      type: "video/mp4"
+                                    }
+                                  })
+                                ]
+                              )
+                            ]
+                          )
+                        ])
+                      ])
+                    ]
+                  )
+                ]
+              )
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "card-deck" }, [
               _c("div", { staticClass: "card" }, [
                 _c(
                   "div",
-                  { staticClass: "embed-responsive embed-responsive-16by9" },
+                  {
+                    staticClass: "video-thumbnail",
+                    attrs: { "data-toggle": "modal", "data-target": "#walter" }
+                  },
                   [
-                    _c(
-                      "video",
-                      {
-                        staticClass: "embed-responsive-item",
-                        attrs: { controls: "" }
-                      },
-                      [
-                        _c("source", {
-                          attrs: {
-                            src:
-                              "https://koritos.sfo2.digitaloceanspaces.com/walter%20casquino_converted.mp4?autoplay=0",
-                            type: "video/mp4"
-                          }
-                        })
-                      ]
-                    )
+                    _c("img", {
+                      staticClass: "card-img-top ",
+                      attrs: {
+                        src: "images/team/walter.jpg",
+                        alt: "Card image cap"
+                      }
+                    })
                   ]
                 ),
                 _vm._v(" "),
@@ -33285,27 +33577,75 @@ var staticRenderFns = [
                 ])
               ]),
               _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "modal fade cmd",
+                  attrs: {
+                    id: "walter",
+                    tabindex: "-1",
+                    role: "dialog",
+                    "aria-labelledby": "exampleModalLongTitle",
+                    "aria-hidden": "true"
+                  }
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "modal-dialog modal-lg",
+                      attrs: { role: "document" }
+                    },
+                    [
+                      _c("div", { staticClass: "modal-content" }, [
+                        _c("div", { staticClass: "modal-body" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "embed-responsive embed-responsive-16by9"
+                            },
+                            [
+                              _c(
+                                "video",
+                                {
+                                  staticClass: "embed-responsive-item vio",
+                                  attrs: { id: "videowalter", controls: "" }
+                                },
+                                [
+                                  _c("source", {
+                                    attrs: {
+                                      src:
+                                        "https://koritos.sfo2.digitaloceanspaces.com/walter%20casquino_converted.mp4?autoplay=0",
+                                      type: "video/mp4"
+                                    }
+                                  })
+                                ]
+                              )
+                            ]
+                          )
+                        ])
+                      ])
+                    ]
+                  )
+                ]
+              ),
+              _vm._v(" "),
               _c("div", { staticClass: "card" }, [
                 _c(
                   "div",
-                  { staticClass: "embed-responsive embed-responsive-16by9" },
+                  {
+                    staticClass: "video-thumbnail",
+                    attrs: { "data-toggle": "modal", "data-target": "#vega" }
+                  },
                   [
-                    _c(
-                      "video",
-                      {
-                        staticClass: "embed-responsive-item",
-                        attrs: { controls: "" }
-                      },
-                      [
-                        _c("source", {
-                          attrs: {
-                            src:
-                              "https://koritos.sfo2.digitaloceanspaces.com/antonioVega_converted.mp4?autoplay=0",
-                            type: "video/mp4"
-                          }
-                        })
-                      ]
-                    )
+                    _c("img", {
+                      staticClass: "card-img-top ",
+                      attrs: {
+                        src: "images/team/vega.jpg",
+                        alt: "Card image cap"
+                      }
+                    })
                   ]
                 ),
                 _vm._v(" "),
@@ -33322,27 +33662,75 @@ var staticRenderFns = [
                 ])
               ]),
               _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "modal fade cmd",
+                  attrs: {
+                    id: "vega",
+                    tabindex: "-1",
+                    role: "dialog",
+                    "aria-labelledby": "exampleModalLongTitle",
+                    "aria-hidden": "true"
+                  }
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "modal-dialog modal-lg",
+                      attrs: { role: "document" }
+                    },
+                    [
+                      _c("div", { staticClass: "modal-content" }, [
+                        _c("div", { staticClass: "modal-body" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "embed-responsive embed-responsive-16by9"
+                            },
+                            [
+                              _c(
+                                "video",
+                                {
+                                  staticClass: "embed-responsive-item vio",
+                                  attrs: { id: "videovega", controls: "" }
+                                },
+                                [
+                                  _c("source", {
+                                    attrs: {
+                                      src:
+                                        "https://koritos.sfo2.digitaloceanspaces.com/antonioVega_converted.mp4?autoplay=0",
+                                      type: "video/mp4"
+                                    }
+                                  })
+                                ]
+                              )
+                            ]
+                          )
+                        ])
+                      ])
+                    ]
+                  )
+                ]
+              ),
+              _vm._v(" "),
               _c("div", { staticClass: "card" }, [
                 _c(
                   "div",
-                  { staticClass: "embed-responsive embed-responsive-16by9" },
+                  {
+                    staticClass: "video-thumbnail",
+                    attrs: { "data-toggle": "modal", "data-target": "#juanita" }
+                  },
                   [
-                    _c(
-                      "video",
-                      {
-                        staticClass: "embed-responsive-item",
-                        attrs: { controls: "" }
-                      },
-                      [
-                        _c("source", {
-                          attrs: {
-                            src:
-                              "https://koritos.sfo2.digitaloceanspaces.com/JuanitaHernandez.mp4?autoplay=0",
-                            type: "video/mp4"
-                          }
-                        })
-                      ]
-                    )
+                    _c("img", {
+                      staticClass: "card-img-top ",
+                      attrs: {
+                        src: "images/team/juanita.jpg",
+                        alt: "Card image cap"
+                      }
+                    })
                   ]
                 ),
                 _vm._v(" "),
@@ -33357,7 +33745,61 @@ var staticRenderFns = [
                     )
                   ])
                 ])
-              ])
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "modal fade cmd",
+                  attrs: {
+                    id: "juanita",
+                    tabindex: "-1",
+                    role: "dialog",
+                    "aria-labelledby": "exampleModalLongTitle",
+                    "aria-hidden": "true"
+                  }
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "modal-dialog modal-lg",
+                      attrs: { role: "document" }
+                    },
+                    [
+                      _c("div", { staticClass: "modal-content" }, [
+                        _c("div", { staticClass: "modal-body" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "embed-responsive embed-responsive-16by9"
+                            },
+                            [
+                              _c(
+                                "video",
+                                {
+                                  staticClass: "embed-responsive-item vio",
+                                  attrs: { id: "videojuanita", controls: "" }
+                                },
+                                [
+                                  _c("source", {
+                                    attrs: {
+                                      src:
+                                        "https://koritos.sfo2.digitaloceanspaces.com/JuanitaHernandez.mp4?autoplay=0",
+                                      type: "video/mp4"
+                                    }
+                                  })
+                                ]
+                              )
+                            ]
+                          )
+                        ])
+                      ])
+                    ]
+                  )
+                ]
+              )
             ])
           ])
         ])
@@ -33379,15 +33821,19 @@ if (false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(60)
+}
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = null
+var __vue_script__ = __webpack_require__(62)
 /* template */
 var __vue_template__ = __webpack_require__(43)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
-var __vue_styles__ = null
+var __vue_styles__ = injectStyle
 /* scopeId */
 var __vue_scopeId__ = null
 /* moduleIdentifier (server only) */
@@ -33450,24 +33896,18 @@ var staticRenderFns = [
               _c("div", { staticClass: "card" }, [
                 _c(
                   "div",
-                  { staticClass: "embed-responsive embed-responsive-16by9" },
+                  {
+                    staticClass: "video-thumbnail",
+                    attrs: { "data-toggle": "modal", "data-target": "#angulo" }
+                  },
                   [
-                    _c(
-                      "video",
-                      {
-                        staticClass: "embed-responsive-item",
-                        attrs: { controls: "" }
-                      },
-                      [
-                        _c("source", {
-                          attrs: {
-                            src:
-                              "https://koritos.sfo2.digitaloceanspaces.com/DiegoAngulo.mp4?autoplay=0",
-                            type: "video/mp4"
-                          }
-                        })
-                      ]
-                    )
+                    _c("img", {
+                      staticClass: "card-img-top ",
+                      attrs: {
+                        src: "images/team/angulo.jpg",
+                        alt: "Card image cap"
+                      }
+                    })
                   ]
                 ),
                 _vm._v(" "),
@@ -33484,27 +33924,75 @@ var staticRenderFns = [
                 ])
               ]),
               _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "modal fade cmd",
+                  attrs: {
+                    id: "angulo",
+                    tabindex: "-1",
+                    role: "dialog",
+                    "aria-labelledby": "exampleModalLongTitle",
+                    "aria-hidden": "true"
+                  }
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "modal-dialog modal-lg",
+                      attrs: { role: "document" }
+                    },
+                    [
+                      _c("div", { staticClass: "modal-content" }, [
+                        _c("div", { staticClass: "modal-body" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "embed-responsive embed-responsive-16by9"
+                            },
+                            [
+                              _c(
+                                "video",
+                                {
+                                  staticClass: "embed-responsive-item vio",
+                                  attrs: { id: "videoangulo", controls: "" }
+                                },
+                                [
+                                  _c("source", {
+                                    attrs: {
+                                      src:
+                                        "https://koritos.sfo2.digitaloceanspaces.com/DiegoAngulo.mp4?autoplay=0",
+                                      type: "video/mp4"
+                                    }
+                                  })
+                                ]
+                              )
+                            ]
+                          )
+                        ])
+                      ])
+                    ]
+                  )
+                ]
+              ),
+              _vm._v(" "),
               _c("div", { staticClass: "card" }, [
                 _c(
                   "div",
-                  { staticClass: "embed-responsive embed-responsive-16by9" },
+                  {
+                    staticClass: "video-thumbnail",
+                    attrs: { "data-toggle": "modal", "data-target": "#lency" }
+                  },
                   [
-                    _c(
-                      "video",
-                      {
-                        staticClass: "embed-responsive-item",
-                        attrs: { controls: "" }
-                      },
-                      [
-                        _c("source", {
-                          attrs: {
-                            src:
-                              "https://koritos.sfo2.digitaloceanspaces.com/LencyQuiroz.mp4?autoplay=0",
-                            type: "video/mp4"
-                          }
-                        })
-                      ]
-                    )
+                    _c("img", {
+                      staticClass: "card-img-top ",
+                      attrs: {
+                        src: "images/team/lency.jpg",
+                        alt: "Card image cap"
+                      }
+                    })
                   ]
                 ),
                 _vm._v(" "),
@@ -33521,27 +34009,75 @@ var staticRenderFns = [
                 ])
               ]),
               _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "modal fade cmd",
+                  attrs: {
+                    id: "lency",
+                    tabindex: "-1",
+                    role: "dialog",
+                    "aria-labelledby": "exampleModalLongTitle",
+                    "aria-hidden": "true"
+                  }
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "modal-dialog modal-lg",
+                      attrs: { role: "document" }
+                    },
+                    [
+                      _c("div", { staticClass: "modal-content" }, [
+                        _c("div", { staticClass: "modal-body" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "embed-responsive embed-responsive-16by9"
+                            },
+                            [
+                              _c(
+                                "video",
+                                {
+                                  staticClass: "embed-responsive-item vio",
+                                  attrs: { id: "videolency", controls: "" }
+                                },
+                                [
+                                  _c("source", {
+                                    attrs: {
+                                      src:
+                                        "https://koritos.sfo2.digitaloceanspaces.com/LencyQuiroz.mp4?autoplay=0",
+                                      type: "video/mp4"
+                                    }
+                                  })
+                                ]
+                              )
+                            ]
+                          )
+                        ])
+                      ])
+                    ]
+                  )
+                ]
+              ),
+              _vm._v(" "),
               _c("div", { staticClass: "card" }, [
                 _c(
                   "div",
-                  { staticClass: "embed-responsive embed-responsive-16by9" },
+                  {
+                    staticClass: "video-thumbnail",
+                    attrs: { "data-toggle": "modal", "data-target": "#ivan" }
+                  },
                   [
-                    _c(
-                      "video",
-                      {
-                        staticClass: "embed-responsive-item",
-                        attrs: { controls: "" }
-                      },
-                      [
-                        _c("source", {
-                          attrs: {
-                            src:
-                              "https://koritos.sfo2.digitaloceanspaces.com/IvanFerrandoPerea_converted.mp4?autoplay=0",
-                            type: "video/mp4"
-                          }
-                        })
-                      ]
-                    )
+                    _c("img", {
+                      staticClass: "card-img-top ",
+                      attrs: {
+                        src: "images/team/ivan.png",
+                        alt: "Card image cap"
+                      }
+                    })
                   ]
                 ),
                 _vm._v(" "),
@@ -33556,31 +34092,79 @@ var staticRenderFns = [
                     )
                   ])
                 ])
-              ])
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "modal fade cmd",
+                  attrs: {
+                    id: "ivan",
+                    tabindex: "-1",
+                    role: "dialog",
+                    "aria-labelledby": "exampleModalLongTitle",
+                    "aria-hidden": "true"
+                  }
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "modal-dialog modal-lg",
+                      attrs: { role: "document" }
+                    },
+                    [
+                      _c("div", { staticClass: "modal-content" }, [
+                        _c("div", { staticClass: "modal-body" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "embed-responsive embed-responsive-16by9"
+                            },
+                            [
+                              _c(
+                                "video",
+                                {
+                                  staticClass: "embed-responsive-item vio",
+                                  attrs: { id: "videoivan", controls: "" }
+                                },
+                                [
+                                  _c("source", {
+                                    attrs: {
+                                      src:
+                                        "https://koritos.sfo2.digitaloceanspaces.com/IvanFerrandoPerea_converted.mp4?autoplay=0",
+                                      type: "video/mp4"
+                                    }
+                                  })
+                                ]
+                              )
+                            ]
+                          )
+                        ])
+                      ])
+                    ]
+                  )
+                ]
+              )
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "card-deck" }, [
               _c("div", { staticClass: "card" }, [
                 _c(
                   "div",
-                  { staticClass: "embed-responsive embed-responsive-16by9" },
+                  {
+                    staticClass: "video-thumbnail",
+                    attrs: { "data-toggle": "modal", "data-target": "#obeso" }
+                  },
                   [
-                    _c(
-                      "video",
-                      {
-                        staticClass: "embed-responsive-item",
-                        attrs: { controls: "" }
-                      },
-                      [
-                        _c("source", {
-                          attrs: {
-                            src:
-                              "https://koritos.sfo2.digitaloceanspaces.com/Jessica%20Obeso_converted.mp4?autoplay=0",
-                            type: "video/mp4"
-                          }
-                        })
-                      ]
-                    )
+                    _c("img", {
+                      staticClass: "card-img-top ",
+                      attrs: {
+                        src: "images/team/obeso.jpg",
+                        alt: "Card image cap"
+                      }
+                    })
                   ]
                 ),
                 _vm._v(" "),
@@ -33597,27 +34181,75 @@ var staticRenderFns = [
                 ])
               ]),
               _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "modal fade cmd",
+                  attrs: {
+                    id: "obeso",
+                    tabindex: "-1",
+                    role: "dialog",
+                    "aria-labelledby": "exampleModalLongTitle",
+                    "aria-hidden": "true"
+                  }
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "modal-dialog modal-lg",
+                      attrs: { role: "document" }
+                    },
+                    [
+                      _c("div", { staticClass: "modal-content" }, [
+                        _c("div", { staticClass: "modal-body" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "embed-responsive embed-responsive-16by9"
+                            },
+                            [
+                              _c(
+                                "video",
+                                {
+                                  staticClass: "embed-responsive-item vio",
+                                  attrs: { id: "videoobeso", controls: "" }
+                                },
+                                [
+                                  _c("source", {
+                                    attrs: {
+                                      src:
+                                        "https://koritos.sfo2.digitaloceanspaces.com/Jessica%20Obeso_converted.mp4?autoplay=0",
+                                      type: "video/mp4"
+                                    }
+                                  })
+                                ]
+                              )
+                            ]
+                          )
+                        ])
+                      ])
+                    ]
+                  )
+                ]
+              ),
+              _vm._v(" "),
               _c("div", { staticClass: "card" }, [
                 _c(
                   "div",
-                  { staticClass: "embed-responsive embed-responsive-16by9" },
+                  {
+                    staticClass: "video-thumbnail",
+                    attrs: { "data-toggle": "modal", "data-target": "#henry" }
+                  },
                   [
-                    _c(
-                      "video",
-                      {
-                        staticClass: "embed-responsive-item",
-                        attrs: { controls: "" }
-                      },
-                      [
-                        _c("source", {
-                          attrs: {
-                            src:
-                              "https://koritos.sfo2.digitaloceanspaces.com/henryCarnero.mp4?autoplay=0",
-                            type: "video/mp4"
-                          }
-                        })
-                      ]
-                    )
+                    _c("img", {
+                      staticClass: "card-img-top ",
+                      attrs: {
+                        src: "images/team/henry.jpg",
+                        alt: "Card image cap"
+                      }
+                    })
                   ]
                 ),
                 _vm._v(" "),
@@ -33634,27 +34266,75 @@ var staticRenderFns = [
                 ])
               ]),
               _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "modal fade cmd",
+                  attrs: {
+                    id: "henry",
+                    tabindex: "-1",
+                    role: "dialog",
+                    "aria-labelledby": "exampleModalLongTitle",
+                    "aria-hidden": "true"
+                  }
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "modal-dialog modal-lg",
+                      attrs: { role: "document" }
+                    },
+                    [
+                      _c("div", { staticClass: "modal-content" }, [
+                        _c("div", { staticClass: "modal-body" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "embed-responsive embed-responsive-16by9"
+                            },
+                            [
+                              _c(
+                                "video",
+                                {
+                                  staticClass: "embed-responsive-item vio",
+                                  attrs: { id: "videohenry", controls: "" }
+                                },
+                                [
+                                  _c("source", {
+                                    attrs: {
+                                      src:
+                                        "https://koritos.sfo2.digitaloceanspaces.com/henryCarnero.mp4?autoplay=0",
+                                      type: "video/mp4"
+                                    }
+                                  })
+                                ]
+                              )
+                            ]
+                          )
+                        ])
+                      ])
+                    ]
+                  )
+                ]
+              ),
+              _vm._v(" "),
               _c("div", { staticClass: "card" }, [
                 _c(
                   "div",
-                  { staticClass: "embed-responsive embed-responsive-16by9" },
+                  {
+                    staticClass: "video-thumbnail",
+                    attrs: { "data-toggle": "modal", "data-target": "#joyce" }
+                  },
                   [
-                    _c(
-                      "video",
-                      {
-                        staticClass: "embed-responsive-item",
-                        attrs: { controls: "" }
-                      },
-                      [
-                        _c("source", {
-                          attrs: {
-                            src:
-                              "https://koritos.sfo2.digitaloceanspaces.com/Joice%20Cieza_converted.mp4?autoplay=0",
-                            type: "video/mp4"
-                          }
-                        })
-                      ]
-                    )
+                    _c("img", {
+                      staticClass: "card-img-top ",
+                      attrs: {
+                        src: "images/team/joyce.jpg",
+                        alt: "Card image cap"
+                      }
+                    })
                   ]
                 ),
                 _vm._v(" "),
@@ -33669,31 +34349,79 @@ var staticRenderFns = [
                     )
                   ])
                 ])
-              ])
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "modal fade cmd",
+                  attrs: {
+                    id: "joyce",
+                    tabindex: "-1",
+                    role: "dialog",
+                    "aria-labelledby": "exampleModalLongTitle",
+                    "aria-hidden": "true"
+                  }
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "modal-dialog modal-lg",
+                      attrs: { role: "document" }
+                    },
+                    [
+                      _c("div", { staticClass: "modal-content" }, [
+                        _c("div", { staticClass: "modal-body" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "embed-responsive embed-responsive-16by9"
+                            },
+                            [
+                              _c(
+                                "video",
+                                {
+                                  staticClass: "embed-responsive-item vio",
+                                  attrs: { id: "videojoyce", controls: "" }
+                                },
+                                [
+                                  _c("source", {
+                                    attrs: {
+                                      src:
+                                        "https://koritos.sfo2.digitaloceanspaces.com/Joice%20Cieza_converted.mp4?autoplay=0",
+                                      type: "video/mp4"
+                                    }
+                                  })
+                                ]
+                              )
+                            ]
+                          )
+                        ])
+                      ])
+                    ]
+                  )
+                ]
+              )
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "card-deck" }, [
               _c("div", { staticClass: "card" }, [
                 _c(
                   "div",
-                  { staticClass: "embed-responsive embed-responsive-16by9" },
+                  {
+                    staticClass: "video-thumbnail",
+                    attrs: { "data-toggle": "modal", "data-target": "#farfan" }
+                  },
                   [
-                    _c(
-                      "video",
-                      {
-                        staticClass: "embed-responsive-item",
-                        attrs: { controls: "" }
-                      },
-                      [
-                        _c("source", {
-                          attrs: {
-                            src:
-                              "https://koritos.sfo2.digitaloceanspaces.com/JoseFarfan_converted.mp4?autoplay=0",
-                            type: "video/mp4"
-                          }
-                        })
-                      ]
-                    )
+                    _c("img", {
+                      staticClass: "card-img-top ",
+                      attrs: {
+                        src: "images/team/farfan.png",
+                        alt: "Card image cap"
+                      }
+                    })
                   ]
                 ),
                 _vm._v(" "),
@@ -33710,27 +34438,75 @@ var staticRenderFns = [
                 ])
               ]),
               _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "modal fade cmd",
+                  attrs: {
+                    id: "farfan",
+                    tabindex: "-1",
+                    role: "dialog",
+                    "aria-labelledby": "exampleModalLongTitle",
+                    "aria-hidden": "true"
+                  }
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "modal-dialog modal-lg",
+                      attrs: { role: "document" }
+                    },
+                    [
+                      _c("div", { staticClass: "modal-content" }, [
+                        _c("div", { staticClass: "modal-body" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "embed-responsive embed-responsive-16by9"
+                            },
+                            [
+                              _c(
+                                "video",
+                                {
+                                  staticClass: "embed-responsive-item vio",
+                                  attrs: { id: "videofarfan", controls: "" }
+                                },
+                                [
+                                  _c("source", {
+                                    attrs: {
+                                      src:
+                                        "https://koritos.sfo2.digitaloceanspaces.com/JoseFarfan_converted.mp4?autoplay=0",
+                                      type: "video/mp4"
+                                    }
+                                  })
+                                ]
+                              )
+                            ]
+                          )
+                        ])
+                      ])
+                    ]
+                  )
+                ]
+              ),
+              _vm._v(" "),
               _c("div", { staticClass: "card" }, [
                 _c(
                   "div",
-                  { staticClass: "embed-responsive embed-responsive-16by9" },
+                  {
+                    staticClass: "video-thumbnail",
+                    attrs: { "data-toggle": "modal", "data-target": "#pachas" }
+                  },
                   [
-                    _c(
-                      "video",
-                      {
-                        staticClass: "embed-responsive-item",
-                        attrs: { controls: "" }
-                      },
-                      [
-                        _c("source", {
-                          attrs: {
-                            src:
-                              "https://koritos.sfo2.digitaloceanspaces.com/diego%20Pachas.mp4?autoplay=0",
-                            type: "video/mp4"
-                          }
-                        })
-                      ]
-                    )
+                    _c("img", {
+                      staticClass: "card-img-top ",
+                      attrs: {
+                        src: "images/team/pachas.jpg",
+                        alt: "Card image cap"
+                      }
+                    })
                   ]
                 ),
                 _vm._v(" "),
@@ -33747,27 +34523,78 @@ var staticRenderFns = [
                 ])
               ]),
               _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "modal fade cmd",
+                  attrs: {
+                    id: "pachas",
+                    tabindex: "-1",
+                    role: "dialog",
+                    "aria-labelledby": "exampleModalLongTitle",
+                    "aria-hidden": "true"
+                  }
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "modal-dialog modal-lg",
+                      attrs: { role: "document" }
+                    },
+                    [
+                      _c("div", { staticClass: "modal-content" }, [
+                        _c("div", { staticClass: "modal-body" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "embed-responsive embed-responsive-16by9"
+                            },
+                            [
+                              _c(
+                                "video",
+                                {
+                                  staticClass: "embed-responsive-item vio",
+                                  attrs: { id: "videopachas", controls: "" }
+                                },
+                                [
+                                  _c("source", {
+                                    attrs: {
+                                      src:
+                                        "https://koritos.sfo2.digitaloceanspaces.com/diego%20Pachas.mp4?autoplay=0",
+                                      type: "video/mp4"
+                                    }
+                                  })
+                                ]
+                              )
+                            ]
+                          )
+                        ])
+                      ])
+                    ]
+                  )
+                ]
+              ),
+              _vm._v(" "),
               _c("div", { staticClass: "card" }, [
                 _c(
                   "div",
-                  { staticClass: "embed-responsive embed-responsive-16by9" },
+                  {
+                    staticClass: "video-thumbnail",
+                    attrs: {
+                      "data-toggle": "modal",
+                      "data-target": "#francisco"
+                    }
+                  },
                   [
-                    _c(
-                      "video",
-                      {
-                        staticClass: "embed-responsive-item",
-                        attrs: { controls: "" }
-                      },
-                      [
-                        _c("source", {
-                          attrs: {
-                            src:
-                              "https://koritos.sfo2.digitaloceanspaces.com/javierLecaros_converted.mp4?autoplay=0",
-                            type: "video/mp4"
-                          }
-                        })
-                      ]
-                    )
+                    _c("img", {
+                      staticClass: "card-img-top ",
+                      attrs: {
+                        src: "images/team/francisco.jpg",
+                        alt: "Card image cap"
+                      }
+                    })
                   ]
                 ),
                 _vm._v(" "),
@@ -33782,7 +34609,61 @@ var staticRenderFns = [
                     )
                   ])
                 ])
-              ])
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "modal fade cmd",
+                  attrs: {
+                    id: "francisco",
+                    tabindex: "-1",
+                    role: "dialog",
+                    "aria-labelledby": "exampleModalLongTitle",
+                    "aria-hidden": "true"
+                  }
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "modal-dialog modal-lg",
+                      attrs: { role: "document" }
+                    },
+                    [
+                      _c("div", { staticClass: "modal-content" }, [
+                        _c("div", { staticClass: "modal-body" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "embed-responsive embed-responsive-16by9"
+                            },
+                            [
+                              _c(
+                                "video",
+                                {
+                                  staticClass: "embed-responsive-item vio",
+                                  attrs: { id: "videofrancisco", controls: "" }
+                                },
+                                [
+                                  _c("source", {
+                                    attrs: {
+                                      src:
+                                        "https://koritos.sfo2.digitaloceanspaces.com/javierLecaros_converted.mp4?autoplay=0",
+                                      type: "video/mp4"
+                                    }
+                                  })
+                                ]
+                              )
+                            ]
+                          )
+                        ])
+                      ])
+                    ]
+                  )
+                ]
+              )
             ])
           ])
         ])
@@ -33804,15 +34685,19 @@ if (false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(63)
+}
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = null
+var __vue_script__ = __webpack_require__(65)
 /* template */
 var __vue_template__ = __webpack_require__(45)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
-var __vue_styles__ = null
+var __vue_styles__ = injectStyle
 /* scopeId */
 var __vue_scopeId__ = null
 /* moduleIdentifier (server only) */
@@ -33875,24 +34760,18 @@ var staticRenderFns = [
               _c("div", { staticClass: "card" }, [
                 _c(
                   "div",
-                  { staticClass: "embed-responsive embed-responsive-16by9" },
+                  {
+                    staticClass: "video-thumbnail",
+                    attrs: { "data-toggle": "modal", "data-target": "#ada" }
+                  },
                   [
-                    _c(
-                      "video",
-                      {
-                        staticClass: "embed-responsive-item",
-                        attrs: { controls: "" }
-                      },
-                      [
-                        _c("source", {
-                          attrs: {
-                            src:
-                              "https://koritos.sfo2.digitaloceanspaces.com/adaAlegre_converted.mp4?autoplay=0",
-                            type: "video/mp4"
-                          }
-                        })
-                      ]
-                    )
+                    _c("img", {
+                      staticClass: "card-img-top ",
+                      attrs: {
+                        src: "images/team/ada.jpg",
+                        alt: "Card image cap"
+                      }
+                    })
                   ]
                 ),
                 _vm._v(" "),
@@ -33907,27 +34786,75 @@ var staticRenderFns = [
                 ])
               ]),
               _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "modal fade cmd",
+                  attrs: {
+                    id: "ada",
+                    tabindex: "-1",
+                    role: "dialog",
+                    "aria-labelledby": "exampleModalLongTitle",
+                    "aria-hidden": "true"
+                  }
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "modal-dialog modal-lg",
+                      attrs: { role: "document" }
+                    },
+                    [
+                      _c("div", { staticClass: "modal-content" }, [
+                        _c("div", { staticClass: "modal-body" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "embed-responsive embed-responsive-16by9"
+                            },
+                            [
+                              _c(
+                                "video",
+                                {
+                                  staticClass: "embed-responsive-item vio",
+                                  attrs: { id: "videoada", controls: "" }
+                                },
+                                [
+                                  _c("source", {
+                                    attrs: {
+                                      src:
+                                        "https://koritos.sfo2.digitaloceanspaces.com/adaAlegre_converted.mp4?autoplay=0",
+                                      type: "video/mp4"
+                                    }
+                                  })
+                                ]
+                              )
+                            ]
+                          )
+                        ])
+                      ])
+                    ]
+                  )
+                ]
+              ),
+              _vm._v(" "),
               _c("div", { staticClass: "card" }, [
                 _c(
                   "div",
-                  { staticClass: "embed-responsive embed-responsive-16by9" },
+                  {
+                    staticClass: "video-thumbnail",
+                    attrs: { "data-toggle": "modal", "data-target": "#juan" }
+                  },
                   [
-                    _c(
-                      "video",
-                      {
-                        staticClass: "embed-responsive-item",
-                        attrs: { controls: "" }
-                      },
-                      [
-                        _c("source", {
-                          attrs: {
-                            src:
-                              "https://koritos.sfo2.digitaloceanspaces.com/xennia_converted.mp4?autoplay=0",
-                            type: "video/mp4"
-                          }
-                        })
-                      ]
-                    )
+                    _c("img", {
+                      staticClass: "card-img-top ",
+                      attrs: {
+                        src: "images/team/juan.jpg",
+                        alt: "Card image cap"
+                      }
+                    })
                   ]
                 ),
                 _vm._v(" "),
@@ -33944,27 +34871,78 @@ var staticRenderFns = [
                 ])
               ]),
               _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "modal fade cmd",
+                  attrs: {
+                    id: "juan",
+                    tabindex: "-1",
+                    role: "dialog",
+                    "aria-labelledby": "exampleModalLongTitle",
+                    "aria-hidden": "true"
+                  }
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "modal-dialog modal-lg",
+                      attrs: { role: "document" }
+                    },
+                    [
+                      _c("div", { staticClass: "modal-content" }, [
+                        _c("div", { staticClass: "modal-body" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "embed-responsive embed-responsive-16by9"
+                            },
+                            [
+                              _c(
+                                "video",
+                                {
+                                  staticClass: "embed-responsive-item vio",
+                                  attrs: { id: "videojuan", controls: "" }
+                                },
+                                [
+                                  _c("source", {
+                                    attrs: {
+                                      src:
+                                        "https://koritos.sfo2.digitaloceanspaces.com/pabloMaccasi_converted.mp4?autoplay=0",
+                                      type: "video/mp4"
+                                    }
+                                  })
+                                ]
+                              )
+                            ]
+                          )
+                        ])
+                      ])
+                    ]
+                  )
+                ]
+              ),
+              _vm._v(" "),
               _c("div", { staticClass: "card" }, [
                 _c(
                   "div",
-                  { staticClass: "embed-responsive embed-responsive-16by9" },
+                  {
+                    staticClass: "video-thumbnail",
+                    attrs: {
+                      "data-toggle": "modal",
+                      "data-target": "#valencia"
+                    }
+                  },
                   [
-                    _c(
-                      "video",
-                      {
-                        staticClass: "embed-responsive-item",
-                        attrs: { controls: "" }
-                      },
-                      [
-                        _c("source", {
-                          attrs: {
-                            src:
-                              "https://koritos.sfo2.digitaloceanspaces.com/pierreFoy.mp4?autoplay=0",
-                            type: "video/mp4"
-                          }
-                        })
-                      ]
-                    )
+                    _c("img", {
+                      staticClass: "card-img-top ",
+                      attrs: {
+                        src: "images/team/valencia.png",
+                        alt: "Card image cap"
+                      }
+                    })
                   ]
                 ),
                 _vm._v(" "),
@@ -33979,31 +34957,79 @@ var staticRenderFns = [
                     )
                   ])
                 ])
-              ])
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "modal fade cmd",
+                  attrs: {
+                    id: "valencia",
+                    tabindex: "-1",
+                    role: "dialog",
+                    "aria-labelledby": "exampleModalLongTitle",
+                    "aria-hidden": "true"
+                  }
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "modal-dialog modal-lg",
+                      attrs: { role: "document" }
+                    },
+                    [
+                      _c("div", { staticClass: "modal-content" }, [
+                        _c("div", { staticClass: "modal-body" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "embed-responsive embed-responsive-16by9"
+                            },
+                            [
+                              _c(
+                                "video",
+                                {
+                                  staticClass: "embed-responsive-item vio",
+                                  attrs: { id: "videovalencia", controls: "" }
+                                },
+                                [
+                                  _c("source", {
+                                    attrs: {
+                                      src:
+                                        "https://koritos.sfo2.digitaloceanspaces.com/pierreFoy.mp4?autoplay=0",
+                                      type: "video/mp4"
+                                    }
+                                  })
+                                ]
+                              )
+                            ]
+                          )
+                        ])
+                      ])
+                    ]
+                  )
+                ]
+              )
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "card-deck" }, [
               _c("div", { staticClass: "card" }, [
                 _c(
                   "div",
-                  { staticClass: "embed-responsive embed-responsive-16by9" },
+                  {
+                    staticClass: "video-thumbnail",
+                    attrs: { "data-toggle": "modal", "data-target": "#xen" }
+                  },
                   [
-                    _c(
-                      "video",
-                      {
-                        staticClass: "embed-responsive-item",
-                        attrs: { controls: "" }
-                      },
-                      [
-                        _c("source", {
-                          attrs: {
-                            src:
-                              "https://koritos.sfo2.digitaloceanspaces.com/xennia_converted.mp4?autoplay=0",
-                            type: "video/mp4"
-                          }
-                        })
-                      ]
-                    )
+                    _c("img", {
+                      staticClass: "card-img-top ",
+                      attrs: {
+                        src: "images/team/xen.png",
+                        alt: "Card image cap"
+                      }
+                    })
                   ]
                 ),
                 _vm._v(" "),
@@ -34020,27 +35046,78 @@ var staticRenderFns = [
                 ])
               ]),
               _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "modal fade cmd",
+                  attrs: {
+                    id: "xen",
+                    tabindex: "-1",
+                    role: "dialog",
+                    "aria-labelledby": "exampleModalLongTitle",
+                    "aria-hidden": "true"
+                  }
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "modal-dialog modal-lg",
+                      attrs: { role: "document" }
+                    },
+                    [
+                      _c("div", { staticClass: "modal-content" }, [
+                        _c("div", { staticClass: "modal-body" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "embed-responsive embed-responsive-16by9"
+                            },
+                            [
+                              _c(
+                                "video",
+                                {
+                                  staticClass: "embed-responsive-item vio",
+                                  attrs: { id: "videoxen", controls: "" }
+                                },
+                                [
+                                  _c("source", {
+                                    attrs: {
+                                      src:
+                                        "https://koritos.sfo2.digitaloceanspaces.com/xennia_converted.mp4?autoplay=0",
+                                      type: "video/mp4"
+                                    }
+                                  })
+                                ]
+                              )
+                            ]
+                          )
+                        ])
+                      ])
+                    ]
+                  )
+                ]
+              ),
+              _vm._v(" "),
               _c("div", { staticClass: "card" }, [
                 _c(
                   "div",
-                  { staticClass: "embed-responsive embed-responsive-16by9" },
+                  {
+                    staticClass: "video-thumbnail",
+                    attrs: {
+                      "data-toggle": "modal",
+                      "data-target": "#Torreblanca"
+                    }
+                  },
                   [
-                    _c(
-                      "video",
-                      {
-                        staticClass: "embed-responsive-item",
-                        attrs: { controls: "" }
-                      },
-                      [
-                        _c("source", {
-                          attrs: {
-                            src:
-                              "https://koritos.sfo2.digitaloceanspaces.com/juliaTorreblanca.mp4?autoplay=0",
-                            type: "video/mp4"
-                          }
-                        })
-                      ]
-                    )
+                    _c("img", {
+                      staticClass: "card-img-top ",
+                      attrs: {
+                        src: "images/team/Torreblanca.jpg",
+                        alt: "Card image cap"
+                      }
+                    })
                   ]
                 ),
                 _vm._v(" "),
@@ -34057,27 +35134,78 @@ var staticRenderFns = [
                 ])
               ]),
               _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "modal fade cmd",
+                  attrs: {
+                    id: "Torreblanca",
+                    tabindex: "-1",
+                    role: "dialog",
+                    "aria-labelledby": "exampleModalLongTitle",
+                    "aria-hidden": "true"
+                  }
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "modal-dialog modal-lg",
+                      attrs: { role: "document" }
+                    },
+                    [
+                      _c("div", { staticClass: "modal-content" }, [
+                        _c("div", { staticClass: "modal-body" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "embed-responsive embed-responsive-16by9"
+                            },
+                            [
+                              _c(
+                                "video",
+                                {
+                                  staticClass: "embed-responsive-item vio",
+                                  attrs: {
+                                    id: "videoTorreblanca",
+                                    controls: ""
+                                  }
+                                },
+                                [
+                                  _c("source", {
+                                    attrs: {
+                                      src:
+                                        "https://koritos.sfo2.digitaloceanspaces.com/juliaTorreblanca.mp4?autoplay=0",
+                                      type: "video/mp4"
+                                    }
+                                  })
+                                ]
+                              )
+                            ]
+                          )
+                        ])
+                      ])
+                    ]
+                  )
+                ]
+              ),
+              _vm._v(" "),
               _c("div", { staticClass: "card" }, [
                 _c(
                   "div",
-                  { staticClass: "embed-responsive embed-responsive-16by9" },
+                  {
+                    staticClass: "video-thumbnail",
+                    attrs: { "data-toggle": "modal", "data-target": "#alvaro" }
+                  },
                   [
-                    _c(
-                      "video",
-                      {
-                        staticClass: "embed-responsive-item",
-                        attrs: { controls: "" }
-                      },
-                      [
-                        _c("source", {
-                          attrs: {
-                            src:
-                              "https://koritos.sfo2.digitaloceanspaces.com/AlvaroDiaz.mp4?autoplay=0",
-                            type: "video/mp4"
-                          }
-                        })
-                      ]
-                    )
+                    _c("img", {
+                      staticClass: "card-img-top ",
+                      attrs: {
+                        src: "images/team/alvaro.jpg",
+                        alt: "Card image cap"
+                      }
+                    })
                   ]
                 ),
                 _vm._v(" "),
@@ -34092,31 +35220,81 @@ var staticRenderFns = [
                     )
                   ])
                 ])
-              ])
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "modal fade cmd",
+                  attrs: {
+                    id: "alvaro",
+                    tabindex: "-1",
+                    role: "dialog",
+                    "aria-labelledby": "exampleModalLongTitle",
+                    "aria-hidden": "true"
+                  }
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "modal-dialog modal-lg",
+                      attrs: { role: "document" }
+                    },
+                    [
+                      _c("div", { staticClass: "modal-content" }, [
+                        _c("div", { staticClass: "modal-body" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "embed-responsive embed-responsive-16by9"
+                            },
+                            [
+                              _c(
+                                "video",
+                                {
+                                  staticClass: "embed-responsive-item vio",
+                                  attrs: { id: "videoalvaro", controls: "" }
+                                },
+                                [
+                                  _c("source", {
+                                    attrs: {
+                                      src:
+                                        "https://koritos.sfo2.digitaloceanspaces.com/AlvaroDiaz.mp4?autoplay=0",
+                                      type: "video/mp4"
+                                    }
+                                  })
+                                ]
+                              )
+                            ]
+                          )
+                        ])
+                      ])
+                    ]
+                  )
+                ]
+              )
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "card-deck" }, [
-              _c("div", { staticClass: "card" }, [
+            _c(
+              "div",
+              { staticClass: "card", staticStyle: { width: "19rem" } },
+              [
                 _c(
                   "div",
-                  { staticClass: "embed-responsive embed-responsive-16by9" },
+                  {
+                    staticClass: "video-thumbnail",
+                    attrs: { "data-toggle": "modal", "data-target": "#karim" }
+                  },
                   [
-                    _c(
-                      "video",
-                      {
-                        staticClass: "embed-responsive-item",
-                        attrs: { controls: "" }
-                      },
-                      [
-                        _c("source", {
-                          attrs: {
-                            src:
-                              "https://koritos.sfo2.digitaloceanspaces.com/karimKahhat.mp4?autoplay=0",
-                            type: "video/mp4"
-                          }
-                        })
-                      ]
-                    )
+                    _c("img", {
+                      staticClass: "card-img-top ",
+                      attrs: {
+                        src: "images/team/karim.jpg",
+                        alt: "Card image cap"
+                      }
+                    })
                   ]
                 ),
                 _vm._v(" "),
@@ -34131,8 +35309,62 @@ var staticRenderFns = [
                     )
                   ])
                 ])
-              ])
-            ])
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "modal fade cmd",
+                attrs: {
+                  id: "karim",
+                  tabindex: "-1",
+                  role: "dialog",
+                  "aria-labelledby": "exampleModalLongTitle",
+                  "aria-hidden": "true"
+                }
+              },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass: "modal-dialog modal-lg",
+                    attrs: { role: "document" }
+                  },
+                  [
+                    _c("div", { staticClass: "modal-content" }, [
+                      _c("div", { staticClass: "modal-body" }, [
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "embed-responsive embed-responsive-16by9"
+                          },
+                          [
+                            _c(
+                              "video",
+                              {
+                                staticClass: "embed-responsive-item vio",
+                                attrs: { id: "videokarim", controls: "" }
+                              },
+                              [
+                                _c("source", {
+                                  attrs: {
+                                    src:
+                                      "https://koritos.sfo2.digitaloceanspaces.com/karimKahhat.mp4?autoplay=0",
+                                    type: "video/mp4"
+                                  }
+                                })
+                              ]
+                            )
+                          ]
+                        )
+                      ])
+                    ])
+                  ]
+                )
+              ]
+            )
           ])
         ])
       ])
@@ -34973,15 +36205,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
         return {
+            encontrado: 0,
             persona_id: 0,
             nombre: '',
             tipo_documento: '',
@@ -35071,13 +36299,40 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             //Envia la petición para visualizar la data de esa página
             me.listarPersona(page, buscar, criterio);
         },
+        eliminarPersona: function eliminarPersona(id) {
+            var _this = this;
+
+            swal({
+                title: 'Esta seguro de eliminar este usuario?',
+                type: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Aceptar!',
+                cancelButtonText: 'Cancelar',
+                confirmButtonClass: 'btn btn-success',
+                cancelButtonClass: 'btn btn-danger',
+                buttonsStyling: false,
+                reverseButtons: true
+            }).then(function (result) {
+                if (result.value) {
+                    var url = 'users/' + id;
+                    axios.delete(url).then(function (response) {
+                        _this.listarPersona(1, '', 'nombre');
+                    });
+                } else if (
+                // Read more about handling dismissals
+                result.dismiss === swal.DismissReason.cancel) {}
+            });
+        },
         registrarPersona: function registrarPersona() {
+            console.log('registrando');
             if (this.validarPersona()) {
                 return;
             }
 
             var me = this;
-
+            console.log('ya casi registramos');
             axios.post('/user/registrar', {
                 'nombre': this.nombre,
                 'tipo_documento': this.tipo_documento,
@@ -35094,6 +36349,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 me.listarPersona(1, '', 'nombre');
             }).catch(function (error) {
                 console.log(error);
+                console.log('se jodio xD');
             });
         },
         actualizarPersona: function actualizarPersona() {
@@ -35121,7 +36377,25 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 console.log(error);
             });
         },
+        buscarPersona: function buscarPersona(usuario) {
+            var url = '/users/' + usuario;
+            console.log(url);
+            axios.get(url).then(function (response) {
+
+                console.log('esta el usuario =' + response.data);
+                if (response.data) {
+                    this.encontrado = 1;
+                    console.log('si esta');
+                } else {
+                    this.encontrado = 0;
+                    console.log('no esta');
+                }
+            }).catch(function (error) {
+                console.log(error);
+            });
+        },
         validarPersona: function validarPersona() {
+            console.log('validando');
             this.errorPersona = 0;
             this.errorMostrarMsjPersona = [];
 
@@ -35129,6 +36403,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             if (!this.usuario) this.errorMostrarMsjPersona.push("El nombre de usuario no puede estar vacío.");
             if (!this.password) this.errorMostrarMsjPersona.push("La password del usuario no puede estar vacía.");
             if (this.idrol == 0) this.errorMostrarMsjPersona.push("Seleccione una Role.");
+            // console.log('antesde encontrar');
+            // this.encontrado = this.buscarPersona(this.usuario);
+            // console.log(this.buscarPersona(this.usuario));
+            // if (this.encontrado) this.errorMostrarMsjPersona.push("El usuario ya existe21");
+            // console.log('despues de encontrar');
             if (this.errorMostrarMsjPersona.length) this.errorPersona = 1;
 
             return this.errorPersona;
@@ -35194,7 +36473,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             }
         },
         desactivarUsuario: function desactivarUsuario(id) {
-            var _this = this;
+            var _this2 = this;
 
             swal({
                 title: 'Esta seguro de desactivar este usuario?',
@@ -35210,7 +36489,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 reverseButtons: true
             }).then(function (result) {
                 if (result.value) {
-                    var me = _this;
+                    var me = _this2;
 
                     axios.put('/user/desactivar', {
                         'id': id
@@ -35226,7 +36505,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             });
         },
         activarUsuario: function activarUsuario(id) {
-            var _this2 = this;
+            var _this3 = this;
 
             swal({
                 title: 'Esta seguro de activar este usuario?',
@@ -35242,7 +36521,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 reverseButtons: true
             }).then(function (result) {
                 if (result.value) {
-                    var me = _this2;
+                    var me = _this3;
 
                     axios.put('/user/activar', {
                         'id': id
@@ -35406,57 +36685,36 @@ var render = function() {
                 "tbody",
                 _vm._l(_vm.arrayPersona, function(persona) {
                   return _c("tr", { key: persona.id }, [
-                    _c(
-                      "td",
-                      [
-                        _c(
-                          "button",
-                          {
-                            staticClass: "btn btn-warning btn-sm",
-                            attrs: { type: "button" },
-                            on: {
-                              click: function($event) {
-                                _vm.abrirModal("persona", "actualizar", persona)
-                              }
+                    _c("td", [
+                      _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-warning btn-sm",
+                          attrs: { type: "button" },
+                          on: {
+                            click: function($event) {
+                              _vm.abrirModal("persona", "actualizar", persona)
                             }
-                          },
-                          [_c("i", { staticClass: "icon-pencil" })]
-                        ),
-                        _vm._v("  \n                                "),
-                        persona.condicion
-                          ? [
-                              _c(
-                                "button",
-                                {
-                                  staticClass: "btn btn-danger btn-sm",
-                                  attrs: { type: "button" },
-                                  on: {
-                                    click: function($event) {
-                                      _vm.desactivarUsuario(persona.id)
-                                    }
-                                  }
-                                },
-                                [_c("i", { staticClass: "icon-trash" })]
-                              )
-                            ]
-                          : [
-                              _c(
-                                "button",
-                                {
-                                  staticClass: "btn btn-info btn-sm",
-                                  attrs: { type: "button" },
-                                  on: {
-                                    click: function($event) {
-                                      _vm.activarUsuario(persona.id)
-                                    }
-                                  }
-                                },
-                                [_c("i", { staticClass: "icon-check" })]
-                              )
-                            ]
-                      ],
-                      2
-                    ),
+                          }
+                        },
+                        [_c("i", { staticClass: "icon-pencil" })]
+                      ),
+                      _vm._v("  \n                                "),
+                      _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-danger btn-sm",
+                          attrs: { type: "button" },
+                          on: {
+                            click: function($event) {
+                              _vm.eliminarPersona(persona.id)
+                            }
+                          }
+                        },
+                        [_c("i", { staticClass: "icon-trash" })]
+                      ),
+                      _vm._v("  \n\n                            ")
+                    ]),
                     _vm._v(" "),
                     _c("td", {
                       domProps: { textContent: _vm._s(persona.nombre) }
@@ -35464,22 +36722,6 @@ var render = function() {
                     _vm._v(" "),
                     _c("td", {
                       domProps: { textContent: _vm._s(persona.tipo_documento) }
-                    }),
-                    _vm._v(" "),
-                    _c("td", {
-                      domProps: { textContent: _vm._s(persona.num_documento) }
-                    }),
-                    _vm._v(" "),
-                    _c("td", {
-                      domProps: { textContent: _vm._s(persona.direccion) }
-                    }),
-                    _vm._v(" "),
-                    _c("td", {
-                      domProps: { textContent: _vm._s(persona.telefono) }
-                    }),
-                    _vm._v(" "),
-                    _c("td", {
-                      domProps: { textContent: _vm._s(persona.email) }
                     }),
                     _vm._v(" "),
                     _c("td", {
@@ -35666,209 +36908,6 @@ var render = function() {
                                 return
                               }
                               _vm.nombre = $event.target.value
-                            }
-                          }
-                        })
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "form-group row" }, [
-                      _c(
-                        "label",
-                        {
-                          staticClass: "col-md-3 form-control-label",
-                          attrs: { for: "text-input" }
-                        },
-                        [_vm._v("Tipo documento")]
-                      ),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "col-md-9" }, [
-                        _c(
-                          "select",
-                          {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.tipo_documento,
-                                expression: "tipo_documento"
-                              }
-                            ],
-                            staticClass: "form-control",
-                            on: {
-                              change: function($event) {
-                                var $$selectedVal = Array.prototype.filter
-                                  .call($event.target.options, function(o) {
-                                    return o.selected
-                                  })
-                                  .map(function(o) {
-                                    var val = "_value" in o ? o._value : o.value
-                                    return val
-                                  })
-                                _vm.tipo_documento = $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              }
-                            }
-                          },
-                          [
-                            _c("option", { attrs: { value: "DNI" } }, [
-                              _vm._v("DNI")
-                            ]),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "RUC" } }, [
-                              _vm._v("RUC")
-                            ]),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "CEDULA" } }, [
-                              _vm._v("CEDULA")
-                            ]),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "PASS" } }, [
-                              _vm._v("PASS")
-                            ])
-                          ]
-                        )
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "form-group row" }, [
-                      _c(
-                        "label",
-                        {
-                          staticClass: "col-md-3 form-control-label",
-                          attrs: { for: "email-input" }
-                        },
-                        [_vm._v("Número documento")]
-                      ),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "col-md-9" }, [
-                        _c("input", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.num_documento,
-                              expression: "num_documento"
-                            }
-                          ],
-                          staticClass: "form-control",
-                          attrs: {
-                            type: "email",
-                            placeholder: "Número de documento"
-                          },
-                          domProps: { value: _vm.num_documento },
-                          on: {
-                            input: function($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.num_documento = $event.target.value
-                            }
-                          }
-                        })
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "form-group row" }, [
-                      _c(
-                        "label",
-                        {
-                          staticClass: "col-md-3 form-control-label",
-                          attrs: { for: "email-input" }
-                        },
-                        [_vm._v("Dirección")]
-                      ),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "col-md-9" }, [
-                        _c("input", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.direccion,
-                              expression: "direccion"
-                            }
-                          ],
-                          staticClass: "form-control",
-                          attrs: { type: "email", placeholder: "Dirección" },
-                          domProps: { value: _vm.direccion },
-                          on: {
-                            input: function($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.direccion = $event.target.value
-                            }
-                          }
-                        })
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "form-group row" }, [
-                      _c(
-                        "label",
-                        {
-                          staticClass: "col-md-3 form-control-label",
-                          attrs: { for: "email-input" }
-                        },
-                        [_vm._v("Teléfono")]
-                      ),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "col-md-9" }, [
-                        _c("input", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.telefono,
-                              expression: "telefono"
-                            }
-                          ],
-                          staticClass: "form-control",
-                          attrs: { type: "email", placeholder: "Teléfono" },
-                          domProps: { value: _vm.telefono },
-                          on: {
-                            input: function($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.telefono = $event.target.value
-                            }
-                          }
-                        })
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "form-group row" }, [
-                      _c(
-                        "label",
-                        {
-                          staticClass: "col-md-3 form-control-label",
-                          attrs: { for: "email-input" }
-                        },
-                        [_vm._v("Email")]
-                      ),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "col-md-9" }, [
-                        _c("input", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.email,
-                              expression: "email"
-                            }
-                          ],
-                          staticClass: "form-control",
-                          attrs: { type: "email", placeholder: "Email" },
-                          domProps: { value: _vm.email },
-                          on: {
-                            input: function($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.email = $event.target.value
                             }
                           }
                         })
@@ -36119,14 +37158,6 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("th", [_vm._v("Tipo Documento")]),
         _vm._v(" "),
-        _c("th", [_vm._v("Número")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Dirección")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Teléfono")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Email")]),
-        _vm._v(" "),
         _c("th", [_vm._v("Usuario")]),
         _vm._v(" "),
         _c("th", [_vm._v("Role")])
@@ -36142,6 +37173,1151 @@ if (false) {
     require("vue-hot-reload-api")      .rerender("data-v-4cd6a1fc", module.exports)
   }
 }
+
+/***/ }),
+/* 57 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(58);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(11)("260672fc", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-b279080a\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Abc.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-b279080a\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Abc.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 58 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(10)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.video-thumbnail {\n  position: relative;\n  display: inline-block;\n  cursor: pointer;\n  margin: 5px;\n}\n.video-thumbnail:before {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  -webkit-transform: translate(-50%, -50%);\n  content: \"\\F01D\";\n  font-family: FontAwesome;\n  font-size: 100px;\n  color: #fff;\n  opacity: 0.8;\n  text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);\n}\n.video-thumbnail:hover:before {\n  color: #eee;\n}\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 59 */
+/***/ (function(module, exports) {
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+$(document).ready(function () {
+    console.log('estoy vivo');
+    //     $('#html5Video').on('hidden.bs.modal', function() {
+    //         console.log('joder');
+    //         var html5Video = document.getElementById("htmlVideo");
+    //         if (html5Video != null) {
+    //         html5Video.pause();
+    //         html5Video.currentTime = 0;
+    //         }
+    //   });
+
+    $(document).on('hidden.bs.modal', '#eduardo', function () {
+        console.log('eduardo');
+        var html5Video = document.getElementById("videoEduardo");
+        if (html5Video != null) {
+            html5Video.pause();
+            html5Video.currentTime = 0;
+        }
+    });
+    $(document).on('hidden.bs.modal', '#guizado', function () {
+        console.log('guizado');
+        var html5Video = document.getElementById("videoGuizado");
+        if (html5Video != null) {
+            html5Video.pause();
+            html5Video.currentTime = 0;
+        }
+    });
+    $(document).on('hidden.bs.modal', '#jorge', function () {
+        console.log('jorge');
+        var html5Video = document.getElementById("videojorge");
+        if (html5Video != null) {
+            html5Video.pause();
+            html5Video.currentTime = 0;
+        }
+    });
+    $(document).on('hidden.bs.modal', '#roncal', function () {
+        console.log('roncal');
+        var html5Video = document.getElementById("videoroncal");
+        if (html5Video != null) {
+            html5Video.pause();
+            html5Video.currentTime = 0;
+        }
+    });
+    $(document).on('hidden.bs.modal', '#vladimir', function () {
+        console.log('vladimir');
+        var html5Video = document.getElementById("videovladimir");
+        if (html5Video != null) {
+            html5Video.pause();
+            html5Video.currentTime = 0;
+        }
+    });
+    $(document).on('hidden.bs.modal', '#guillermo', function () {
+        console.log('guillermo');
+        var html5Video = document.getElementById("videoguillermo");
+        if (html5Video != null) {
+            html5Video.pause();
+            html5Video.currentTime = 0;
+        }
+    });
+    $(document).on('hidden.bs.modal', '#walter', function () {
+        console.log('walter');
+        var html5Video = document.getElementById("videowalter");
+        if (html5Video != null) {
+            html5Video.pause();
+            html5Video.currentTime = 0;
+        }
+    });
+    $(document).on('hidden.bs.modal', '#vega', function () {
+        console.log('vega');
+        var html5Video = document.getElementById("videovega");
+        if (html5Video != null) {
+            html5Video.pause();
+            html5Video.currentTime = 0;
+        }
+    });
+    $(document).on('hidden.bs.modal', '#juanita', function () {
+        console.log('juanita');
+        var html5Video = document.getElementById("videojuanita");
+        if (html5Video != null) {
+            html5Video.pause();
+            html5Video.currentTime = 0;
+        }
+    });
+});
+
+/***/ }),
+/* 60 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(61);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(11)("3df647c8", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-aede9218\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Laboral.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-aede9218\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Laboral.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 61 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(10)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.video-thumbnail {\n  position: relative;\n  display: inline-block;\n  cursor: pointer;\n  margin: 5px;\n}\n.video-thumbnail:before {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  -webkit-transform: translate(-50%, -50%);\n  content: \"\\F01D\";\n  font-family: FontAwesome;\n  font-size: 100px;\n  color: #fff;\n  opacity: 0.8;\n  text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);\n}\n.video-thumbnail:hover:before {\n  color: #eee;\n}\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 62 */
+/***/ (function(module, exports) {
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+$(document).ready(function () {
+    console.log('estoy vivo');
+    //     $('#html5Video').on('hidden.bs.modal', function() {
+    //         console.log('joder');
+    //         var html5Video = document.getElementById("htmlVideo");
+    //         if (html5Video != null) {
+    //         html5Video.pause();
+    //         html5Video.currentTime = 0;
+    //         }
+    //   });
+
+    $(document).on('hidden.bs.modal', '#angulo', function () {
+        console.log('angulo');
+        var html5Video = document.getElementById("videoangulo");
+        if (html5Video != null) {
+            html5Video.pause();
+            html5Video.currentTime = 0;
+        }
+    });
+    $(document).on('hidden.bs.modal', '#lency', function () {
+        console.log('lency');
+        var html5Video = document.getElementById("videolency");
+        if (html5Video != null) {
+            html5Video.pause();
+            html5Video.currentTime = 0;
+        }
+    });
+    $(document).on('hidden.bs.modal', '#ivan', function () {
+        console.log('ivan');
+        var html5Video = document.getElementById("videoivan");
+        if (html5Video != null) {
+            html5Video.pause();
+            html5Video.currentTime = 0;
+        }
+    });
+    $(document).on('hidden.bs.modal', '#obeso', function () {
+        console.log('obeso');
+        var html5Video = document.getElementById("videoobeso");
+        if (html5Video != null) {
+            html5Video.pause();
+            html5Video.currentTime = 0;
+        }
+    });
+    $(document).on('hidden.bs.modal', '#henry', function () {
+        console.log('henry');
+        var html5Video = document.getElementById("videohenry");
+        if (html5Video != null) {
+            html5Video.pause();
+            html5Video.currentTime = 0;
+        }
+    });
+    $(document).on('hidden.bs.modal', '#joyce', function () {
+        console.log('joyce');
+        var html5Video = document.getElementById("videojoyce");
+        if (html5Video != null) {
+            html5Video.pause();
+            html5Video.currentTime = 0;
+        }
+    });
+    $(document).on('hidden.bs.modal', '#farfan', function () {
+        console.log('farfan');
+        var html5Video = document.getElementById("videofarfan");
+        if (html5Video != null) {
+            html5Video.pause();
+            html5Video.currentTime = 0;
+        }
+    });
+    $(document).on('hidden.bs.modal', '#pachas', function () {
+        console.log('pachas');
+        var html5Video = document.getElementById("videopachas");
+        if (html5Video != null) {
+            html5Video.pause();
+            html5Video.currentTime = 0;
+        }
+    });
+    $(document).on('hidden.bs.modal', '#francisco', function () {
+        console.log('francisco');
+        var html5Video = document.getElementById("videofrancisco");
+        if (html5Video != null) {
+            html5Video.pause();
+            html5Video.currentTime = 0;
+        }
+    });
+});
+
+/***/ }),
+/* 63 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(64);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(11)("338a809c", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-328b41c8\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Ambiental.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-328b41c8\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Ambiental.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 64 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(10)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.video-thumbnail {\n  position: relative;\n  display: inline-block;\n  cursor: pointer;\n  margin: 5px;\n}\n.video-thumbnail:before {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  -webkit-transform: translate(-50%, -50%);\n  content: \"\\F01D\";\n  font-family: FontAwesome;\n  font-size: 100px;\n  color: #fff;\n  opacity: 0.8;\n  text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);\n}\n.video-thumbnail:hover:before {\n  color: #eee;\n}\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 65 */
+/***/ (function(module, exports) {
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+$(document).ready(function () {
+    console.log('estoy vivo');
+    //     $('#html5Video').on('hidden.bs.modal', function() {
+    //         console.log('joder');
+    //         var html5Video = document.getElementById("htmlVideo");
+    //         if (html5Video != null) {
+    //         html5Video.pause();
+    //         html5Video.currentTime = 0;
+    //         }
+    //   });
+
+    $(document).on('hidden.bs.modal', '#ada', function () {
+        console.log('ada');
+        var html5Video = document.getElementById("videoada");
+        if (html5Video != null) {
+            html5Video.pause();
+            html5Video.currentTime = 0;
+        }
+    });
+    $(document).on('hidden.bs.modal', '#juan', function () {
+        console.log('juan');
+        var html5Video = document.getElementById("videojuan");
+        if (html5Video != null) {
+            html5Video.pause();
+            html5Video.currentTime = 0;
+        }
+    });
+    $(document).on('hidden.bs.modal', '#valencia', function () {
+        console.log('valencia');
+        var html5Video = document.getElementById("videovalencia");
+        if (html5Video != null) {
+            html5Video.pause();
+            html5Video.currentTime = 0;
+        }
+    });
+    $(document).on('hidden.bs.modal', '#xen', function () {
+        console.log('xen');
+        var html5Video = document.getElementById("videoxen");
+        if (html5Video != null) {
+            html5Video.pause();
+            html5Video.currentTime = 0;
+        }
+    });
+    $(document).on('hidden.bs.modal', '#Torreblanca', function () {
+        console.log('Torreblanca');
+        var html5Video = document.getElementById("videoTorreblanca");
+        if (html5Video != null) {
+            html5Video.pause();
+            html5Video.currentTime = 0;
+        }
+    });
+    $(document).on('hidden.bs.modal', '#alvaro', function () {
+        console.log('alvaro');
+        var html5Video = document.getElementById("videoalvaro");
+        if (html5Video != null) {
+            html5Video.pause();
+            html5Video.currentTime = 0;
+        }
+    });
+    $(document).on('hidden.bs.modal', '#karim', function () {
+        console.log('karim');
+        var html5Video = document.getElementById("videokarim");
+        if (html5Video != null) {
+            html5Video.pause();
+            html5Video.currentTime = 0;
+        }
+    });
+});
 
 /***/ })
 /******/ ]);

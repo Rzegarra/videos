@@ -119,10 +119,10 @@ class UserController extends Controller
     }
     public function destroy(Request $request)
     {
-        if (!$request->ajax()) return redirect('/');
+        // if (!$request->ajax()) return redirect('/');
+        // $user = User::findOrFail($request->id);
         $user = User::findOrFail($request->id);
-        $persona = Persona::findOrFail($user->id);
+        // $user->delete();
         $user->delete();
-        $persona->delete();
     }
 }
