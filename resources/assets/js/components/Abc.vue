@@ -62,29 +62,31 @@
                             </div>
                             </div>
 
-
                             <div class="card">
-                                <div class="video-thumbnail" data-toggle="modal" data-target="#jorge">
-                                    <img class="card-img-top " src="images/team/barcenas.jpg" alt="Card image cap">
-                                </div>       
+                                <div class="video-thumbnail" data-toggle="modal" data-target="#guillermo">
+                                    <img class="card-img-top " src="images/team/guillermo.jpg" alt="Card image cap">
+                                </div> 
                                     <div class="card-body">
-                                    <h5 class="card-title">Jorge Barcenas</h5>
-                                    <p class="card-text">Gestión social en proyectos de gran inversión y minería y desarrollo sostenible.</p>
+                                    <h5 class="card-title">Guillermo Bracamonte</h5>
+                                    <p class="card-text">Reformas necesarias para promover la minería responsable.</p>
                                 </div>
                             </div>
-                            <div class="modal fade cmd" id="jorge" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                            <div class="modal fade cmd" id="guillermo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
                             <div class="modal-dialog modal-lg" role="document">
                                 <div class="modal-content">
                                     <div class="modal-body">
                                         <div class="embed-responsive embed-responsive-16by9">
-                                    <video class="embed-responsive-item vio" id="videojorge" controls>
-                                        <source src="https://koritos.sfo2.digitaloceanspaces.com/jorgebarcena.mp4?autoplay=0" type="video/mp4">
+                                    <video class="embed-responsive-item vio" id="videoguillermo" controls>
+                                        <source src="https://koritos.sfo2.digitaloceanspaces.com/GuillermoBracamonte.mp4?autoplay=0" type="video/mp4">
                                     </video>
                                 </div>
                                     </div>
                                 </div>
                             </div>
                             </div>
+
+
+                            
                         </div>
                         <div class="card-deck">
 
@@ -93,7 +95,7 @@
                                     <img class="card-img-top " src="images/team/roncal.png" alt="Card image cap">
                                 </div>   
                                     <div class="card-body">
-                                    <h5 class="card-title">Christian Roncal</h5>
+                                    <h5 class="card-title">Christian Gonzales Roncal</h5>
                                     <p class="card-text">Minería: actividad de desarrollo, explotación y beneficio.</p>
                                 </div>
                             </div>
@@ -138,21 +140,21 @@
                             </div>
 
                             <div class="card">
-                                <div class="video-thumbnail" data-toggle="modal" data-target="#guillermo">
-                                    <img class="card-img-top " src="images/team/guillermo.jpg" alt="Card image cap">
-                                </div> 
+                                <div class="video-thumbnail" data-toggle="modal" data-target="#jorge">
+                                    <img class="card-img-top " src="images/team/barcenas.jpg" alt="Card image cap">
+                                </div>       
                                     <div class="card-body">
-                                    <h5 class="card-title">Guillermo Bracamonte</h5>
-                                    <p class="card-text">Reformas necesarias para promover la minería responsable.</p>
+                                    <h5 class="card-title">Jorge Barcenas</h5>
+                                    <p class="card-text">Gestión social en proyectos de gran inversión y minería y desarrollo sostenible.</p>
                                 </div>
                             </div>
-                            <div class="modal fade cmd" id="guillermo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                            <div class="modal fade cmd" id="jorge" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
                             <div class="modal-dialog modal-lg" role="document">
                                 <div class="modal-content">
                                     <div class="modal-body">
                                         <div class="embed-responsive embed-responsive-16by9">
-                                    <video class="embed-responsive-item vio" id="videoguillermo" controls>
-                                        <source src="https://koritos.sfo2.digitaloceanspaces.com/GuillermoBracamonte.mp4?autoplay=0" type="video/mp4">
+                                    <video class="embed-responsive-item vio" id="videojorge" controls>
+                                        <source src="https://koritos.sfo2.digitaloceanspaces.com/jorgebarcena.mp4?autoplay=0" type="video/mp4">
                                     </video>
                                 </div>
                                     </div>
