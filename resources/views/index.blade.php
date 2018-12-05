@@ -1136,7 +1136,7 @@
                             <div class="col-md-4 wow fadeIn" data-wow-delay="0">
                                 <div class="de_count">
                                     <i class="icon_id-2 id-color" data-animation="fadeInDown" data-delay="0"></i>
-                                    <h3 class="timer" data-to="150" data-speed="2500">0</h3>
+                                    <h3 class="timer" data-to="450" data-speed="2500">0</h3>
                                     <span>Asistentes</span>
                                 </div>
                             </div>
@@ -1246,10 +1246,6 @@
                 </div>
             </section>
             <!-- section close -->
-
-            <section class="text-center">
-                <img src="images/ME_banner.jpg" alt="">
-            </section>
 
             <section id="section-quick-contact" class="bordertop">
                 <div class="container">

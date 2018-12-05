@@ -95,7 +95,7 @@
                                     <img class="card-img-top " src="images/team/roncal.png" alt="Card image cap">
                                 </div>   
                                     <div class="card-body">
-                                    <h5 class="card-title">Christian Gonzales Roncal</h5>
+                                    <h5 class="card-title">Christian Gonzales</h5>
                                     <p class="card-text">Minería: actividad de desarrollo, explotación y beneficio.</p>
                                 </div>
                             </div>
